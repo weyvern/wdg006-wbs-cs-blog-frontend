@@ -21,7 +21,7 @@ const CreatePost = () => {
       if (!title || !image || !body)
         return alert("Please fill out all the fields");
       const { data } = await axios.post(
-        `${process.env.BLOG_API}/posts`,
+        `${process.env.REACT_APP_BLOG_API}/posts`,
         {
           title,
           image,

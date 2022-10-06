@@ -46,7 +46,7 @@ const App = () => {
   return (
     <>
       <ToastContainer />
-      <NavBar isAuthenticated={isAuthenticated} logOut={logOut} />
+      <NavBar isAuthenticated={isAuthenticated} logOut={logOut}  user={user}/>
       <Routes>
         <Route path="/" element={<GlobalLayout />}>
           <Route index element={<Home />} />

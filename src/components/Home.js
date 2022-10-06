@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const { data } = await axios.get(`${process.env.BLOG_API}/posts`);
+        const { data } = await axios.get(`${process.env.REACT_APP_BLOG_API}/posts`);
         setPosts(data);
       } catch (error) {
         toast.error("Hey, sorry. Something went wrong!!");

@@ -9,7 +9,7 @@ const SinglePost = () => {
   useEffect(() => {
     const getPost = async () => {
       try {
-        const { data } = await axios.get(`${process.env.BLOG_API}/posts/${id}`);
+        const { data } = await axios.get(`${process.env.REACT_APP_BLOG_API}/posts/${id}`);
         setPost(data);
       } catch (error) {
         console.error(error);

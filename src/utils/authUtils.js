@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getUser = async (token) => {
   try {
-    const { data } = await axios.get(`${process.env.BLOG_API}/auth/me`, {
+    const { data } = await axios.get(`${process.env.REACT_APP_BLOG_API}/auth/me`, {
       headers: { Authorization: token }
     });
     return { data };
@@ -14,7 +14,7 @@ export const getUser = async (token) => {
 export const registerUser = async (formData) => {
   try {
     const { data } = await axios.post(
-      `${process.env.BLOG_API}/auth/signup`,
+      `${process.env.REACT_APP_BLOG_API}/auth/signup`,
       formData
     );
     return { data };
@@ -26,7 +26,7 @@ export const registerUser = async (formData) => {
 export const loginUser = async (formData) => {
   try {
     const { data } = await axios.post(
-      `${process.env.BLOG_API}/auth/signin`,
+      `${process.env.REACT_APP_BLOG_API}/auth/signin`,
       formData
     );
     return { data };
